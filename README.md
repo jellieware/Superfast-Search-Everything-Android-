@@ -13,4 +13,8 @@ Superfast Search-Everything Android
 <br><br>
 -Entering "q" quits
 <br><br>
+Run on Android with Termux:
+<br><br>
+"bash searcheverything.sh"
+<br><br>
 ![1000647005](https://github.com/user-attachments/assets/c6b5594c-8dbe-459f-bc90-fd9f4be3b748)
