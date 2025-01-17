@@ -1,7 +1,7 @@
 # Superfast-Search-Everything-Android-
 Superfast Search-Everything Android
 
--Gets the internal and external(if there is one) sdcard id automatically
+-Gets the internal and external(if there is one) sdcard ID automatically
 -Scans Thousands of files within approximately 10seconds each time the Database Updates or gets updated
 -Colored keyword results for easy viewing
 -Short Speed Statistics
