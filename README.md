@@ -9,12 +9,13 @@ Superfast Search-Everything Android
 <br><br>
 -Short Speed Statistics
 <br><br>
--Entering "u" can update the database anytime needed
+-Entering "," can update the database anytime needed
 <br><br>
--Entering "q" quits
+-Entering "." quits
 <br><br>
 Run on Android with Termux:
 <br><br>
 "bash searcheverything.sh"
 <br><br>
-![1000647005](https://github.com/user-attachments/assets/c6b5594c-8dbe-459f-bc90-fd9f4be3b748)
+
+![1000647006](https://github.com/user-attachments/assets/5166abd5-dfa0-43a9-9ac7-f0483e543e77)
