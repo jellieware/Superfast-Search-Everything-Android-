@@ -7,6 +7,8 @@ Superfast Search-Everything Android
 <br><br>
 -Colored keyword results for easy viewing
 <br><br>
+-Search while typing
+<br><br>
 -Short Speed Statistics
 <br><br>
 -Entering "," can update the database anytime needed
