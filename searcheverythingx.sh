@@ -112,7 +112,7 @@ DBint+=("${DBext[@]}")
 fi
 
 #
-
+#if [[ "${URL}" =~ [^A-Za-z0-9] ]]; then
 stop_spinner
 
 echo -e "\t${YEG}Updated! ${REG}> ${REG}$response${REG}\n\n"
@@ -128,7 +128,7 @@ searcheverything
 while [[ "$holddata" != "." ]]; do
   read -n 1 -s -r -p "Enter another character ('.' to Quit | ',' to Update): " holddata
 printf "\033c"  
-   if [[ "$holddata" != $'\x7f' && "$holddata" != $'\x08' ]]; then
+   if [[ "$holddata" != $'\x7f' && "$holddata" != $'\x08' && "$holddata" =~ [[:alnum:]] ]]; then
   result+="$holddata"
   fi
   if [[ "$holddata" == $'\x7f' || "$holddata" == $'\x08' ]]; then
