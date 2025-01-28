@@ -142,7 +142,7 @@ if [[ "$holddata" == "." ]]; then
 exit 0
 fi
 if [[ "$holddata" == "," ]]; then
-result="${result::-1}"
+#result="${result::-1}"
 searcheverything
 fi
 
