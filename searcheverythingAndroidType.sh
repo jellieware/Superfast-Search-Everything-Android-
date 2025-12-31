@@ -8,12 +8,12 @@ REG='\033[0;0m'
 DP='\e[38;5;162m'
 extensions="\.([^.]*)$"
 "\\.(gz|tgz)$"
-IMAGES="\\.(jpg|jpeg|gif|png|raw|dng|heic|bmp|svg|tiff|svgz)$"
+IMAGES=".*\.(jpg|jpeg|gif|png|raw|dng|heic|bmp|svg|tiff|svgz)$"
 ALL="\.([^.]*)$"
-VIDEO="\\.(mov|mp4|mkv|avi|divx|wmv|vob|m3u8)$"
-DOCS="\\(rtf|doc|docx|odt|txt|md|xml|json|js|html|php|py|pl|css|exe|sh|pdf|csv|xml|torrent|xls|ppt)$"
-AUDIO="\\(ape|flac|alac|mp3|wav|ogg|aac|aiff|m3u|pls)$"
-ARCHIVES="\\(rar|tar|gz|7z|zip|zstd|gzip|bzip2|xz|cab|iso|jar|whl|cue|bin)$"
+VIDEO=".*\.(mov|mp4|mkv|avi|divx|wmv|vob|m3u8)$"
+DOCS=".*\.(rtf|doc|docx|odt|txt|md|xml|json|js|html|php|py|pl|css|exe|sh|pdf|csv|xml|torrent|xls|ppt)$"
+AUDIO=".*\.(ape|flac|alac|mp3|wav|ogg|aac|aiff|m3u|pls)$"
+ARCHIVES=".*\.(rar|tar|gz|7z|zip|zstd|gzip|bzip2|xz|cab|iso|jar|whl|cue|bin)$"
 #while ! [[ $response = "q" ]]
 #do
 # Dynamically determine the F1 key's terminal code using tput
@@ -47,6 +47,7 @@ DBext=()
 holdata=''
 mykeyword=''
 result=''
+mode="All Files"
 #echo -e "\n${YEG}Find What?${REG}"
 #read -p '> ' response
 #echo ''
@@ -140,6 +141,7 @@ echo -e "\t${YEG}Updated! ${REG}> ${REG}$response${REG}\n\n"
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 echo -e "Time taken: ${ELAPSED_TIME} Seconds"
 #printf '%.s─' $(seq 1 $(tput cols)) 
+echo ""
 }
 searcheverything
 #while [ "$holddata" != "q" ]; do
@@ -151,26 +153,32 @@ printf "\033c"
    if [ "$holddata" == "1" ]; then
    extensions=""
    extensions=$ALL
+   mode="All Files"
    fi
    if [ "$holddata" == "2" ]; then
    extensions=""
    extensions=$IMAGES
+   mode="Images"
    fi
    if [ "$holddata" == "3" ]; then
    extensions=""
    extensions=$AUDIO
+   mode="Audio"
    fi
    if [ "$holddata" == "4" ]; then
    extensions=""
    extensions=$VIDEO
+   mode="Videos"
    fi
    if [ "$holddata" == "5" ]; then
    extensions=""
    extensions=$DOCS
+   mode="Documents"
    fi
    if [ "$holddata" == "6" ]; then
    extensions=""
    extensions=$ARCHIVES
+   mode="Archives"
    fi
    
    if [[ "$holddata" != $'\x7f' && "$holddata" != $'\x08' && "$holddata" =~ [[:alnum:]] ]]; then
@@ -209,15 +217,18 @@ for file in "${DBint[@]}"; do
     matching_files+=("$file")
   fi
 done
-  
-  
-printf "%s\n" "${matching_files[@]}" | grep --color='auto' -i "$result"
 
+
+printf "%s\n" "${matching_files[@]}" | grep --color='auto' -i "$result"
+COUNT=$(printf "%s\n" "${matching_files[@]}" | grep --color='auto' -i "$result" | wc -l)
 
 echo ' '
-
 echo "You entered: $result"
-echo ''
+echo ""
+echo "Search Mode: $mode"
+echo ""
+echo "#Results: $COUNT"
+echo ""
 }
 
 if [[ "$holddata" != "." && "$holddata" != "," && "${#result}" -gt 2 ]]; then
