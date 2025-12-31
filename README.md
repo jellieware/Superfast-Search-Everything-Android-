@@ -26,4 +26,4 @@ Run on Android with Termux:
 "bash searcheverything.sh"
 <br><br>
 
-![1000647006](https://github.com/user-attachments/assets/5166abd5-dfa0-43a9-9ac7-f0483e543e77)
+<img width="1080" height="2400" alt="1000911634" src="https://github.com/user-attachments/assets/aeff6cb3-bad2-4fcb-92f0-e276f7687cf5" />
