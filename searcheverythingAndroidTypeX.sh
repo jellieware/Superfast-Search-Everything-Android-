@@ -190,11 +190,7 @@ printf "\033c"
   result="${result::-1}"
   fi
   fi
-  if [[ "$holddata" == "*" || "$holddata" == "@" || "$holddata" == "#" || "$holddata" == "$" || "$holddata" == "%" || "$holddata" == "^" ]]; then
-    if [ "${#result}" -gt 0 ]; then
-    result="${result::-1}"
-    fi
-    fi 
+  
   
 #read -p ' > ' holddata
 #printf "\033c"
