@@ -224,6 +224,7 @@ done
 
 mapfile -t myresults < <(printf "%s\n" "${matching_files[@]}" | grep --color='always' -i "$result")
 for line in "${myresults[@]}"; do
+    echo ""
     echo "${line}"
 done
 echo -e "\n#Matches: ${#myresults[@]}"
