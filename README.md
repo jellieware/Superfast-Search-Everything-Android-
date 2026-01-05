@@ -15,17 +15,11 @@ Superfast Search-Everything Android
 <br><br>
 -Search while typing
 <br><br>
--Short Speed Statistics
+Requires tmux/fzf
 <br><br>
--Entering "," can update the database anytime needed
+pkg install tmux
 <br><br>
--Entering "." quits
-<br><br>
-Run on Android with Termux:
-<br><br>
-"bash searcheverything.sh"
-<br><br>
+pkg install fzf
 
-<img width="1080" height="2400" alt="1000914639" src="https://github.com/user-attachments/assets/72530138-22ee-4c89-bbad-638545715920" />
-
+<br><br>
 
