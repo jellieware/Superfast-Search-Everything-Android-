@@ -17,9 +17,10 @@ Superfast Search-Everything Android
 <br><br>
 Requires tmux/fzf
 <br><br>
-pkg install tmux
+"pkg install tmux"
 <br><br>
-pkg install fzf
+"pkg install fzf"
 
 <br><br>
 
+<img width="1080" height="2400" alt="1000914874" src="https://github.com/user-attachments/assets/3c5381d5-12da-4f46-835c-2a9ecbf1ece9" />
